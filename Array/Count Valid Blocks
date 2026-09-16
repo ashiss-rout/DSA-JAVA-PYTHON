@@ -1,0 +1,17 @@
+arr = [2,3,3,3,2,2,6,4,4,4,4]
+
+i = 0
+f_c = 0
+
+while i < len(arr):
+    p = arr[i]
+    c = 0
+
+    while i < len(arr) and arr[i] == p:
+        c += 1
+        i += 1
+
+    if c == p:
+        f_c += 1
+
+print(f_c)
