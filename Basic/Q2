@@ -1,0 +1,26 @@
+#Q- Add digit sum difference solution for numbers divisible by 4 and 7
+
+def diff(m,n):
+  s1=0
+  s2=0
+  d=0
+  for i in range(m,n+1):
+    if (i%4==0):
+      #if no greater( ex- 100+)
+      #x = i
+      #while x > 0:
+        #s1 += x % 10
+        #x //= 10
+      s1+=(i%10)+(i//10)
+      
+    if (i%7==0):
+      #x = i
+      #while x > 0:
+        #s2 += x % 10
+        #x //= 10
+      s2+=(i%10)+(i//10)
+  d=abs(s1-s2)
+  return d 
+m=int(input("enter no1 "))
+n=int(input("enter no2 "))
+print(diff(m,n))
