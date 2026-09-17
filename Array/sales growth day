@@ -1,0 +1,21 @@
+# Solve growth days based on consecutive non-zero sales 
+
+def growth_days(arr, k):
+    c = 0
+    arr1 = []
+
+    for i in arr:
+        if i != 0:
+            arr1.append(i)
+
+    for i in range(1, len(arr1)):
+        if arr1[i] - arr1[i-1] >= k:
+            c += 1
+
+    return c
+
+
+arr = list(map(int, input().split()))
+k = int(input())
+
+print(growth_days(arr, k))
