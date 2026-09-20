@@ -1,0 +1,13 @@
+# Q-Given a string s, repeatedly remove adjacent pairs of identical characters until no such pair remains. Return the resulting string.
+
+def pair(s):
+  s1=[]
+  for i in s:
+    if  len(s1)>0 and i==s1[len(s1)-1]:
+      s1.pop()
+    else:
+      s1.append(i)
+  return s1
+s='abbaca'
+print(pair(s))
+    
